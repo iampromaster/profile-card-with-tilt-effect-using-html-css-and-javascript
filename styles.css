@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #161613;
+}
+
+.card {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  margin: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  cursor: pointer;
+}
+
+.card .profile {
+  position: absolute;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: 0.5s;
+}
+
+.card:hover .profile {
+  top: 30px;
+}
+
+.card .profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.card:hover .profile img{
+  width: 100px;
+  height: 100px;
+}
+
+
+.card .profile h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.card:hover .profile h3{
+  font-size: 1.2rem;
+}
+
+.card .content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(200px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card:hover .content {
+  transform: translateY(70px);
+  opacity: 1;
+}
+
+.card .content .icons i {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 5px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.card .content p{
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #fff;
+}
+.card .content .btn {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 15px;
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
